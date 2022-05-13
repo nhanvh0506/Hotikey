@@ -254,7 +254,8 @@
         <div class="tab-pane py-3 fade" id="tab-content-result" role="tabpanel" aria-labelledby="tab-result">
           <div class="d-flex justify-content-start mb-3">
             <button type="button" class="btn btn-outline-secondary btn-sm me-2" onclick="sortResult();"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> Sắp xếp</button>
-            <button type="button" class="btn btn-outline-secondary btn-sm" onclick="clearResult();"><i class="fa fa-times" aria-hidden="true"></i> Xóa kết quả</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm" onclick="clearResult();"><i class="fa fa-save" aria-hidden="true"></i> Xóa kết quả</button>
+	    <button type="button" class="btn btn-outline-secondary btn-sm" onclick="save(document.getElementById("wheel_result").value);"><i class="fa fa-times" aria-hidden="true"></i> Tải kết quả</button>
           </div>
           <textarea id="wheel_result" class="form-control rounded-0 section-list" rows="6" readonly="" placeholder="Kết quả quay"></textarea>
         </div>
@@ -453,7 +454,15 @@ document.addEventListener('click', (event) => {
 </script>    
 <script src="https://dichthuatphuongdong.com/tienich/assets/js/feather.min.js"></script>
 <script src="myapp.js" type="text/javascript"></script>
- 
+	  <script type="text/javascript">
+	  function save(text)
+		  {
+    var link = document.createElement('a');
+    link.href = 'data:text/plain;charset=UTF-8,' + escape(text);
+    link.download = 'output.txt';
+    link.click();
+}
+	  </script>
 <script src="https://dichthuatphuongdong.com/tienich/assets/js/confetti/confetti.js"></script>
 <script src="https://dichthuatphuongdong.com/tienich/assets/js/wheel.min.js?ver=1.0.8"></script>
 <script>
