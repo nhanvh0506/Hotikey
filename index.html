@@ -243,7 +243,7 @@
             <button type="button" class="btn btn-outline-secondary btn-sm w-25 me-2" onclick="shuffleWheel();"><i class="fa fa-random" aria-hidden="true"></i> Tráo đổi</button>
             <button type="button" class="btn btn-outline-secondary btn-sm w-25 me-2" onclick="sortWheel(0);"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> Sắp xếp</button>
             <button type="button" class="btn btn-outline-secondary btn-sm w-25 me-2" onclick="sortWheel(1);"><i class="fa fa-sort-alpha-desc" aria-hidden="true"></i> Sắp xếp</button>
-            <!-- <button type="button" class="btn btn-outline-secondary btn-sm w-25" onclick="createWheelModal('showform');" ><i class="fa fa-plus-square-o" aria-hidden="true"></i> Tạo mới</button> -->
+         
           </div>
           <div class="mb-3">
             <textarea id="sector_list" class="form-control rounded-0" onkeyup="loadWheel();countEntries();" placeholder="Hãy thêm các 'mục' tham gia quay, mỗi 'mục' trên một dòng. Hoặc chọn các chủ đề có sẵn bên dưới." rows="6">
@@ -254,8 +254,8 @@
         <div class="tab-pane py-3 fade" id="tab-content-result" role="tabpanel" aria-labelledby="tab-result">
           <div class="d-flex justify-content-start mb-3">
             <button type="button" class="btn btn-outline-secondary btn-sm me-2" onclick="sortResult();"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> Sắp xếp</button>
-            <button type="button" class="btn btn-outline-secondary btn-sm" onclick="clearResult();"><i class="fa fa-save" aria-hidden="true"></i> Xóa kết quả</button>
-	    <button type="button" class="btn btn-outline-secondary btn-sm" onclick="save(document.getElementById("wheel_result").value);"><i class="fa fa-times" aria-hidden="true"></i> Tải kết quả</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm me-2" onclick="clearResult();"><i class="fa fa-times" aria-hidden="true"></i> Xóa kết quả</button>
+			<button type="button" class="btn btn-outline-secondary btn-sm me-2" onclick="save(document.getElementById('wheel_result').value);"><i class="fa fa-save" aria-hidden="true"></i> Tải kết quả</button>
           </div>
           <textarea id="wheel_result" class="form-control rounded-0 section-list" rows="6" readonly="" placeholder="Kết quả quay"></textarea>
         </div>
