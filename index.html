@@ -458,7 +458,7 @@ document.addEventListener('click', (event) => {
 	  function save(text)
 		  {
     var link = document.createElement('a');
-    link.href = 'data:text/plain;charset=UTF-8,' + escape(text);
+    link.href = 'data:text/plain;charset=UTF-8,' + encodeURIComponent(test);
     link.download = 'output.txt';
     link.click();
 }
